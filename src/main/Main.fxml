@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="232.0" style="-fx-border-style: solid; -fx-border-width: 3; -fx-border-color: BLUE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
+    <children>
+        <Separator layoutX="3.0" layoutY="130.0" prefHeight="3.0" prefWidth="226.0" />
+        <Separator layoutX="2.0" layoutY="296.0" prefHeight="3.0" prefWidth="226.0" />
+        <Button fx:id="bt_startServer" layoutX="60.0" layoutY="31.0" mnemonicParsing="false" onAction="#startServer" text="Запустить сервер" />
+        <Label layoutX="96.0" layoutY="6.0" text="Сервер" />
+        <Label layoutX="97.0" layoutY="131.0" text="Клиент" />
+        <Label fx:id="label_connectionStatus" layoutX="62.0" layoutY="97.0" text="Сервер не запущен" />
+        <TextField fx:id="field_IP" layoutX="42.0" layoutY="171.0" text="localhost" />
+        <Label layoutX="91.0" layoutY="154.0" text="IP адресс" />
+        <Label layoutX="102.0" layoutY="204.0" text="Порт" />
+        <TextField fx:id="field_Port" layoutX="41.0" layoutY="222.0" text="27015" />
+        <Button fx:id="bt_joinToServer" layoutX="39.0" onAction="#connectToServer" layoutY="262.0" mnemonicParsing="false"  text="Подключиться к серверу" />
+        <Label layoutX="59.0" layoutY="73.0" text="Статус соединения:">
+            <font>
+                <Font name="System Bold" />
+            </font>
+        </Label>
+        <Label fx:id="label_inputFile" disable="true" layoutX="19.0" layoutY="303.0" text="Входной файл">
+            <font>
+                <Font name="System Bold" />
+            </font>
+        </Label>
+        <Label fx:id="label_outputFile" disable="true" layoutX="122.0" layoutY="303.0" text="Выходной файл">
+            <font>
+                <Font name="System Bold" />
+            </font>
+        </Label>
+        <Button fx:id="bt_inputFile" onAction="#openFile" disable="true" layoutX="8.0" layoutY="325.0" mnemonicParsing="false"  text="Выбрать файл..." />
+        <Button fx:id="bt_outputFile" onAction="#openFile" disable="true" layoutX="121.0" layoutY="325.0" mnemonicParsing="false"  text="Выбрать файл..." />
+        <TextField fx:id="field_outputFile" disable="true" editable="false" layoutX="122.0" layoutY="355.0" prefHeight="25.0" prefWidth="101.0" />
+        <TextField fx:id="field_inputFile" disable="true" editable="false" layoutX="8.0" layoutY="355.0" prefHeight="17.0" prefWidth="101.0" />
+        <TextField fx:id="field_countNumbers" disable="true" layoutX="64.0" layoutY="399.0" prefHeight="17.0" prefWidth="101.0" text="10" />
+        <Label fx:id="label_countNumbers" disable="true" layoutX="33.0" layoutY="382.0" text="Количество искомых чисел">
+            <font>
+                <Font name="System Bold" />
+            </font>
+        </Label>
+        <Button fx:id="bt_calculate" onAction="#calculate" disable="true" layoutX="78.0" layoutY="430.0" mnemonicParsing="false" text="Посчитать" />
+        <Label fx:id="label_executionStatusValue"  layoutX="126.0" layoutY="457.0" />
+        <Label fx:id="label_executionStatus"  layoutX="8.0" layoutY="457.0" text="Статус выполнения:" />
+
+    </children>
+</Pane>
